@@ -1,0 +1,33 @@
+faire un projet en PHP 
+
+=> la programmation Orientée Objet 
+
+=> la semaine => https://github.com/webdevproformation/php-poo-d-mai-2022
+
+=> ambitieux =>
+=> Front Office => public n'importe qui 
+=> Back Office => uniquement QUE aux gestionnaires du site 
+
+---------------- 
+
+url : https://formation.webdevpro.net/php-projet/
+login : php8
+mdp : poo
+
+-----------------
+
+windows => lancer xampp / wamp
+MacOS => MAMP 
+
+Lancer les deux services => Apache et MySQL (MariaDB)
+
+c:\xampp\htdocs (xampp)
+c:\wamp\www (wamp)
+
+/Applications/MAMP/htdocs 
+
+créer le dossier projet-php 
+
+dans ce dossier créer le sous dossier jour1
+
+
