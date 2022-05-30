@@ -1,0 +1,25 @@
+<!-- // http://localhost/projet-php/jour1/10-exo.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><button>btn 1</button></div>
+    <div><button>btn 2</button></div>
+    <div><button>btn 3</button></div>
+    <div><button>btn 4</button></div>
+    <script>
+        document.querySelectorAll("button").forEach(function(btn , index){
+            btn.addEventListener("click" , function(el){
+                fetch(`10-exo.php?article=${index}`)
+                .then(reponse => reponse.json())
+                .then(data => console.log(data))
+            })
+        })
+    </script>
+</body>
+</html>
