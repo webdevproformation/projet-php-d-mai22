@@ -1,0 +1,25 @@
+<!-- http://localhost/projet-php/jour1/09-accueil.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        fetch("09-json.php") // requête AJAX 
+        .then(reponse => reponse.json())
+        .then(articles => 
+            document.querySelector("div").innerHTML = articles.map(function(article){
+                return `<article>
+                    <h2>${article.titre}</h2>
+                    <p>${article.contenu}</p>    
+                </article>`
+            }).join("")
+        )
+    </script>
+</body>
+</html>

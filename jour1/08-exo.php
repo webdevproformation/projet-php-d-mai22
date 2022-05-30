@@ -21,3 +21,4 @@ var_dump($versionPhp);
 // 5 PATH
 $paths = explode(";" , $_SERVER["PATH"] );
 var_dump($paths);
+
