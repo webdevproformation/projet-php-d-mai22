@@ -14,3 +14,6 @@ $phrase2 = PRENOM . " $nom a écrit " . LIVRES[0] . " de Paris avant " . LIVRES[
 // Hernani est une pièce de théâtre sur la condition humaine
 $phrase3 = LIVRES[2] . " est une pièce de théâtre sur la condition humaine";
 var_dump($phrase1 , $phrase2 , $phrase3);
+
+
+// 10h35 bon café @ toute suite !!! 
