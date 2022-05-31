@@ -36,3 +36,18 @@ echo json_encode($user);
 // fetch("00-reprise.php") 
 // fetch("00-reprise.php?id=1") 
 // dans le fichier 00-reprise.php $user mais aussi $_GET 
+
+
+// créer le fichier 01-exo.php 
+
+// tableau formation qui contient des tableaux 
+// [matiere : "PHP" , duree : 20 , unite : "jours"]
+// [matiere : "Javascript" , duree : 15 , unite : "semaine"]
+
+// transformer ce tableau en sa version json 
+
+// créer le fichier 01-exo.html
+// dans ce fichier réaliser une requête ajax 
+// Asynchrone Javascript And (XML) JSON avec le fonction fetch()
+// récupérer les informations et les afficher dans la console du navigateur
+
