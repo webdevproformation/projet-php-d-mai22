@@ -9,9 +9,9 @@
 </head>
 <body>
     <script>
-        fetch("01-exo.php")
-        .then(reponse => reponse.json())
-        .then(formations => console.log(formations));
+        fetch("01-exo.php") // requete AJAX
+        .then(reponse => reponse.json()) // réception des tableaus en format JSON
+        .then(formations => console.log(formations)); // afficher dans la console
     </script>
 </body>
 </html>
