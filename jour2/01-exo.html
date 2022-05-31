@@ -1,0 +1,17 @@
+<!-- http://localhost/projet-php/jour2/01-exo.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo 1 </title>
+</head>
+<body>
+    <script>
+        fetch("01-exo.php")
+        .then(reponse => reponse.json())
+        .then(formations => console.log(formations));
+    </script>
+</body>
+</html>
