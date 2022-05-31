@@ -9,6 +9,24 @@
 </head>
 <body>
     <div class="container">
+        <header class="row">
+            <nav class="navbar navbar-expand navbar-light bg-warning px-3">
+                <a href="<?= WWW ?>" class="navbar-brand" >Mon blog</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="<?= WWW ?>" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= WWW ?>contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="<?= WWW ?>connexion" class="nav-link">Connexion</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <?= $contenu ?>
     </div>
 </body>
