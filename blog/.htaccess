@@ -1,0 +1,6 @@
+# http://localhost/projet-php/blog
+# http://localhost/projet-php/blog/toto
+# http://localhost/projet-php/blog/tata
+
+RewriteEngine On 
+RewriteRule ^([a-zA-Z0-9_\-/]*)$ index.php?page=$1

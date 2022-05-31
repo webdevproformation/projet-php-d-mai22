@@ -34,3 +34,4 @@ elseif($_SESSION["lang"] == "en"){
     <p><?= $texte ?></p>
 </body>
 </html>
+<!-- 15h00 -->

@@ -1,0 +1,51 @@
+
+site internet de type blog 
+
+deux parties
+
+Front Office => public 
+Back Office => uniquement pour les gestionnaires sur site
+               il faut au préalable s'être identifié
+               pour pouvoir accéder à cette partie
+               du site internet 
+
+Front 
+    1 Page d'accueil => liste d'articles
+    2 un article 
+    3 Page de contact => laisser des messages
+    4 Page mention légales
+    5 Page de connexion 
+    6 404
+
+Back Office
+    1 dashboard (panneau de gestion)
+      liste des articles => CRUD créer / modifier / supprimer des articles 
+    2 liste des messages que l'on a reçu depuis le formulaire de contact 
+    3 créer des comptes gestionnaires du site internet 
+
+Architecture => comment j'organise mes fichiers php pour éviter de me répéter
+
+index.php => router (recevoir toutes les requetes )
+
+Controller/ 
+    AccueilController.php 
+    SingleController.php 
+    ...
+
+    => appeler la base de données CRUD 
+    => vue le html et le css 
+    => retourner la réponse 
+
+L'architecture MVC => Model Vue Controller 
+
+nouveau dossier blog
+.htaccess => fichier de configuration de Apache
+index.php 
+Controller/
+Vue/
+Model/
+
+
+
+
+
