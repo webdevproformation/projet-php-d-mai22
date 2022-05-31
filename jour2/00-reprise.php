@@ -5,6 +5,7 @@
 
 // format de données 
 
+$_GET["id"]; 
 
 $user = [
     "nom" => "Alain",
@@ -18,7 +19,7 @@ echo json_encode($user);
 // envoyer ce tableau vers une autre machine
 
 
-// 00-autre.html => 1 demande requete AJAX => fetch("00-reprise.php ") 
+// 00-autre.html => 1 demande requete AJAX => fetch("00-reprise.php") 
 // 2 dans le fichier 00-reprise.php $user qui contient un tableau php 
 // 3 dans le fichier 00-reprise.php echo json_encode($user);
 // transforme le tableau d'origine en json {"nom":"Alain" , "age":12 , "isAdmin" : true , "competences" :["js","php"]}
@@ -31,3 +32,7 @@ echo json_encode($user);
  */
 
  // deux fichiers indépendants : .php et un fichier .html (qui contient du js )
+
+// fetch("00-reprise.php") 
+// fetch("00-reprise.php?id=1") 
+// dans le fichier 00-reprise.php $user mais aussi $_GET 
