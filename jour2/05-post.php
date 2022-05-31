@@ -48,3 +48,19 @@
     } ?>
 </body>
 </html>
+
+<!-- créer le fichier 06-exo.php
+contient un formulaire avec 3 champs
+nom
+email
+age
+
+une fois que le formulaire est soumis => transmis au serveur via la méthode POST
+
+vérifier que le nom contient au moins 3 lettres (sans les espaces avant et après)
+vérifier que le email est valide
+vérifier que le age est un chiffre valide
+
+si ces trois conditions sont confirmées => afficher en dessous du formulaire le message "merci"
+sinon afficher le message => une erreur dans le formulaire est apparue
+-->
