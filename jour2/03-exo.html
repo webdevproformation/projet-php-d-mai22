@@ -1,0 +1,32 @@
+<!-- http://localhost/projet-php/jour2/03-exo.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">get all</button>
+    <button class="btn2">get 0</button>
+    <button class="btn3">get erreur</button>
+    <script>
+        document.querySelector(".btn1").addEventListener("click" , function(){
+            fetch("03-exo.php?id=all")
+            .then(reponse => reponse.json())
+            .then(data => console.log(data))
+        })
+        document.querySelector(".btn2").addEventListener("click" , function(){
+            fetch("03-exo.php?id=0")
+            .then(reponse => reponse.json())
+            .then(data => console.log(data))
+        })
+        document.querySelector(".btn3").addEventListener("click" , function(){
+            fetch("03-exo.php?id=toto")
+            .then(reponse => reponse.json())
+            .then(data => console.log(data))
+        })
+    </script>
+</body>
+</html>
