@@ -28,7 +28,7 @@ if(isset($_GET["page"])){
         echo "veuillez créer le fichier $controllerName";
         die();
     }
-    
+
     require ROOT . DS . "Lib" . DS . "Controller.php"; 
 
     require $controllerName ; 
@@ -45,7 +45,7 @@ if(isset($_GET["page"])){
     call_user_func_array([$c , $method] , [] ); 
 
 
-    var_dump($controllerName); 
+    // var_dump($controllerName); 
 }
 
  
