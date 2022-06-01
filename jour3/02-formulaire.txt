@@ -1,0 +1,19 @@
+
+
+pour créer des formulaires 
+
+helper 
+permet de générer rapidement les champs d'un formulaire 
+
+class Formulaire {
+
+
+}
+
+// cas pratique créer une class Formulaire dans le dossier Lib 
+
+permettre de générer quatres types d'input de nos formulaires 
+input de type text
+input de type email
+textarea
+input de type submit 
