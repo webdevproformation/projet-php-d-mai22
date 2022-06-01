@@ -1,10 +1,19 @@
 <?php 
-
-
 /**
  * class utilitaire permettant de générer des champs de formulaire dans les pages html
  */
 class Formulaire{
+
+    private array $data = [] ;
+
+    /**
+     * initialiser les valeurs dans les différents champs du formulaire 
+     *
+     * @param array $data
+     */
+    public function __construct(array $data){
+        $this->data = $data; 
+    }
 
     /**
      * méthode privée permettant de créer n'importe quelle input 
@@ -15,9 +24,10 @@ class Formulaire{
      * @return string
      */
     private function input(string $nom , string $label , string $type ) : string {
+        $value = (isset($this->data[$nom])) ? $this->data[$nom] : "";
         return "<div class=\"mb-3\">
             <label for=\"$nom\">$label</label>
-            <input type=\"$type\" id=\"$nom\" class=\"form-control\" name=\"$nom\">
+            <input type=\"$type\" id=\"$nom\" class=\"form-control\" name=\"$nom\" value=\"$value\">
         </div>";
     }
 
@@ -51,9 +61,10 @@ class Formulaire{
      * @return string
      */
     public function textarea(string $nom , string $label) :string{
+        $value = (isset($this->data[$nom])) ? $this->data[$nom] : "";
         return "<div class=\"mb-3\">
             <label for=\"$nom\">$label</label>
-            <textarea name=\"$nom\" id=\"$nom\" cols=\"30\" rows=\"10\" class=\"form-control\"></textarea>
+            <textarea name=\"$nom\" id=\"$nom\" cols=\"30\" rows=\"10\" class=\"form-control\">$value</textarea>
         </div>";
     }
 
