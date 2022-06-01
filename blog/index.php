@@ -29,7 +29,12 @@ if(isset($_GET["page"])){
         die();
     }
 
-    require ROOT . DS . "Lib" . DS . "Controller.php"; 
+    /**
+     * fonction qui va permettre de charger l'ensemble des class présentes dans le dossier Lib à la demande 
+     */
+    spl_autoload_register(function($nomClass){
+        require ROOT . DS . "Lib" . DS . $nomClass .".php"; 
+    });
 
     require $controllerName ; 
     
