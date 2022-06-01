@@ -15,3 +15,11 @@ AccueilController extends Controller{
     }
 
 } 
+
+
+Cas pratique pouvez vous envoyer depuis le controller ContactController
+un tableau qui contient les valeurs suivantes 
+titre = "vous avez une question ????
+description = "remplir le formulaire ci dessous et nous revenons vers vous au plus vite !!!"
+
+et afficher la texte dans la page => http://localhost/projet-php/blog/contact

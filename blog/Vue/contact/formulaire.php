@@ -1,5 +1,5 @@
-<h1>Laisser une message :</h1>
-<p>veuillez utiliser le formulaire suivant :</p>
+<h1><?= $titre ?></h1>
+<p><?= $description ?></p>
 <form method="POST">
     <div class="mb-3">
         <label for="nom">saisir votre nom </label>
