@@ -1,0 +1,17 @@
+
+router 
+
+AccueilController extends Controller{
+    // private function send(){}
+
+    public function index(){
+        // envoyer des informations à la vue 
+        $this->send([
+            "titre" => "nous contacter",
+            "sousTitre" => "veuillez utiliser le formulaire suivant :"
+        ]);
+        
+        $this->render("....") // appel une vue 
+    }
+
+} 

@@ -1,0 +1,22 @@
+application  blog
+
+0 dans la navigateur
+// http://localhost/projet-php/blog/contact
+
+1 index.php => router 
+http://localhost/projet-php/blog/contact  <=====> Controller/ContactController.php
+                                            class ContactController extends Controller{
+                                                    public function index(){
+                                                        $this->render("contact/formulaire")
+                                                    }
+                                            }
+2 couche Lib/Controller.php 
+Controller {
+    protected function render("template"){ 
+        // insérer le contenu commun à toutes les pages => entête + menu 
+        // en + la partie dédiée de la page => formulaire / liste d'article ...
+    } 
+}
+
+3 Vue => "contact/formulaire" => Vue/contact/formulaire.php 
+4 Vue => base.php entête et le contenu de la page

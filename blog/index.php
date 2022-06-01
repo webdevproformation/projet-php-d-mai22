@@ -42,7 +42,7 @@ if(isset($_GET["page"])){
         die();
     }
 
-    call_user_func_array([$c , $method] , [] ); 
+    call_user_func_array([$c , $method] , [] ); // exécuter 
 
 
     // var_dump($controllerName); 
