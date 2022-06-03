@@ -1,0 +1,9 @@
+exo 1 -
+
+deux pages en html css et php 
+page1 => liste d'articles ayant un lien lire la suite 
+si vous cliquez sur un des bouton lire la suite => accéder à une autre page 
+qui contient le contenu uniquement de cette page 
+cette page contient un bouton retour à l'accueil => menant vers la page 1
+
+vous devez utiliser une connexion à la base de données 
