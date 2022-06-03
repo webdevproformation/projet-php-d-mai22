@@ -1,0 +1,13 @@
+formulaire 
+
+login et password 
+
+=> récupérer les informations saisies dans le formulaire
+=> requête en base de données pour vérifier est ce que login et le password saisit sont ceux qui sont stockés dans la base de données 
+=> si ok => message bienvenu
+=> si ko => identifiants incorrects 
+
+base de données => table user 
+id  INT AUTO_INCREMENT NOT NULL et clé primaire
+login  VARCHAR(255) NOT NULL
+password VARCHAR(255) NOT NULL
