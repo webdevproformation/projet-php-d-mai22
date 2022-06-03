@@ -1,0 +1,12 @@
+créer un nouveau fichier 07-exo.php 
+
+créer un formulaire avec 3 champs
+login 
+password
+confirm_password
+
+soumis votre formulaire
+
+vérifier que le login existe bien dans la table user et que le mot de passe associé est bien celui saisi et confirmé 
+
+=> mettre un message à la suite du formulaire pour indiquer que l'authentification s'est bien passée ou non 
