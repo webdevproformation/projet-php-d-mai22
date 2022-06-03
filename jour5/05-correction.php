@@ -10,9 +10,22 @@ CREATE TABLE users(
 INSERT INTO users (login , password ) VALUES ( "Alain" , md5("azerty1234") )
 
 // 1697918c7f9551712f531143df2f8a37
+// MD5() fonction de hashage "aaaaa" => 1697918c7f9551712f531143df2f8a37
+// UN_MD5() n'existe pas 1697918c7f9551712f531143df2f8a37 => "aaaaa"
+
+// fonction plus d'une 10 ans 
+// via un dictionnaire => gros tableau => à partir de 1697918c7f9551712f531143df2f8a37 =>  "aaaaa"
+// https://www.php.net/manual/fr/function.md5.php
+
+// contre proposition => 
+// password_hash() // $2y$10$p4RRfV56mpA2q0DJzhKt7uoq1IBHStGejuzscvxBG8gp7ye5VnbS6
+// https://www.php.net/manual/fr/function.password-hash.php
 
 -->
 <?php
+// INSERT INTO users (login , password ) VALUES ("Bob" , "$2y$10$p4RRfV56mpA2q0DJzhKt7uoq1IBHStGejuzscvxBG8gp7ye5VnbS6");
+//var_dump(password_hash("azerty1234", PASSWORD_DEFAULT));
+
 $message = "";
 $class = "";
 if(
@@ -23,13 +36,23 @@ if(
     ){
 
         $connexion = new PDO("mysql:host=localhost;dbname=blog;charset=utf8", "root" , "") ;
-        $sth = $connexion->prepare("SELECT id FROM users WHERE login = :login AND password = MD5(:password)");
-        $sth->execute(["login" => $_POST["login"] , "password" => $_POST["password"]]);
+        $sth = $connexion->prepare("SELECT id, password FROM users WHERE login = :login");
+        $sth->execute(["login" => $_POST["login"]] );
         $user = current($sth->fetchAll(PDO::FETCH_ASSOC));
 
         if(is_array($user)){
-            $message = "vous êtes bien connecté !" ;
-            $class= "success";
+            // comparer  
+            // $2y$10$p4RRfV56mpA2q0DJzhKt7uoq1IBHStGejuzscvxBG8gp7ye5VnbS6
+            // azerty1234
+            $verif =  password_verify($_POST["password"]  , $user["password"]  ) ;
+            //var_dump($verif); 
+            if($verif){
+                $message = "vous êtes bien connecté !" ;
+                $class= "success";
+            }else { 
+                $message = "erreur dans vos identifiants " ;
+                $class="danger"; 
+            }
         } else {
             $message = "erreur dans vos identifiants " ;
             $class="danger"; 
@@ -62,7 +85,7 @@ if(
                 </div>
                 <div class="mb-3 col-4 offset-4">
                     <label for="password">password</label>
-                    <input type="password" id="password" name="password" class="form-control">
+                    <input type="text" id="password" name="password" class="form-control">
                 </div>
                 <div class="mb-3 col-4 offset-4 d-flex justify-content-center">
                     <input type="submit" class="btn btn-info">
